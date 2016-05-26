@@ -138,7 +138,3 @@ h1 {
     background: #F2FFED;
     padding: 10px;
 }
-
-.songlist {
-	list-style-type: none;
-}
