@@ -1,85 +1,350 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-<!--        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/stadtxwetterxkleidung.css">
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Music Player</title>
-    </head>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		  content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <body>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+	<title>Music Library</title>
 
-	 <div class="topnav">
-		 <h1 class="topnav">Music Library</h1> 
+	<!-- CSS-->
+	<link rel="stylesheet" href="css/framework7.material.min.css">
+	<link rel="stylesheet" href="css/framework7.material.colors.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+<body>
+	<!-- Panels overlay-->
+	<div class="panel-overlay"></div>
+
+	<!-- Left panel with reveal effect-->
+	<div class="panel panel-left panel-cover">
+		<div class="content-block">
+			<p>Left panel content goes here</p>
+		</div>
 	</div>
 
-	<div class="content">
-		<ul class="songlist">
-			<li>Song name</li>
-			<li>Song name</li>
-			<li>Song name</li>
-			<li>Song name</li>
-			<li>Song name</li>
-			<li>Song name</li>
-			<li>Song name</li>
-			<li>Song name</li>
-		</ul>
+	<!-- Views-->
+	<div class="views theme-red">
+		<!-- Your main view, should have "view-main" class-->
+		<div class="view view-main">
+
+			<div class="pages">
+				<div class="page navbar-fixed toolbar-fixed">
+					<div data-page="home" class="page with-subnavbar">
+
+						<!-- Top Navbar -->
+						<div class="navbar">
+							<div class="navbar-inner">
+								<div class="left">
+									<a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+								</div>
+								<div class="center sliding">Music Library</div>
+								<div class="right">
+									<img src="img/search.png" height="24" width="24" class="margin-right-20">
+								</div>
+
+								<div class="subnavbar">
+									<!-- Buttons row as tabs controller in Subnavbar-->
+									<div class="buttons-row">
+										<a href="#tab1" class="button active tab-link">Songs</a>
+										<a href="#tab2" class="button tab-link">Playlists</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /End Top Navbar -->
+
+						<!-- Tabs Page Content -->
+						<div class="tabs-swipeable-wrap">
+							<!-- Tabs, tabs wrapper -->
+							<div class="tabs">
+								<!-- Songs -->
+								<div id="tab1" class="page-content tab active">
+									<div class="list-block media-list">
+										<ul>
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+
+											<li>
+												<div class="item-content">
+													<div class="item-media"><img src="img/song.png" width="44"></div>
+													<div class="item-inner">
+														<div class="item-title-row">
+															<div class="item-title">Yellow Submarine</div>
+														</div>
+														<div class="item-subtitle">Beatles</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- /Songs -->
+
+								<!-- Playlist -->
+								<div id="tab2" class="page-content tab">
+									<div class="content-block">
+										... Tab 2 content ...
+									</div>
+								</div>
+								<!-- /Playlist -->
+
+							</div>
+						</div>
+						<!-- Tabs Page Content -->
+
+						<!-- Bottom Toolbar-->
+						<div class="toolbar toolbar-bottom">
+							<div class="toolbar-inner">
+								<div class="player-left">
+									<div class="center">
+										<img src="img/back_w.png" height="24" width="24">
+										<img src="img/play-button_w.png" height="42" width="42">
+										<img src="img/next_w.png" height="24" width="24">
+									</div>
+								</div>
+								<div class="player-right">
+									<img src="img/speakers_w2.png" height="42" width="42">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
 	</div>
 
-	<div class="player-footer">
-	</div>
-    </body>
+	<!-- JS-->
+	<script type="text/javascript" src="js/framework7.min.js"></script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
