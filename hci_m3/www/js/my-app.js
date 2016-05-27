@@ -50,3 +50,8 @@ function createContentPage() {
     );
 	return;
 }
+
+$$('.demo-popover').on('click', function () {
+    var clickedLink = this;
+    myApp.popover('.demo-popover', clickedLink);
+});

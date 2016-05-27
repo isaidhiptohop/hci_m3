@@ -16,13 +16,10 @@
     height: 25%;
 }
 
-.margin-right-20 {
-    margin-right: 20px;
-}
+.margin-14 { margin: 14px; }
+.margin-right-20 {  margin-right: 20px;  }
 
-.padding-top-56 {
-    padding-top: 56px;
-}
+.padding-top-56 {  padding-top: 56px;  }
 
 .padding-0 {  padding: 0px !important;  }
 

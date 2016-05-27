@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>Music Library</title>
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+<body>
+<!-- Panels overlay-->
+<div class="panel-overlay"></div>
+
+<!-- Left panel with reveal effect-->
+<div class="panel panel-left panel-cover">
+    <div class="content-block">
+        <h1 class="centered">
+            <img src="img/vinyls(1).png" height="64" width="64" class="padding-logo">  SyncBeat</h1>
+    </div>
+
+    <div class="list-block">
+        <ul>
+            <li class="item-content">
+                <div class="item-media"><img src="img/song_b.png" height="24" width="24"></div>
+                <div class="item-inner">
+                    <div class="item-title"><a href="musicLib.html">Music</a></div>
+                </div>
+            </li>
+            <li class="item-content">
+                <div class="item-media"><img src="img/speakers_b.png" height="24" width="24"></div>
+                <div class="item-inner">
+                    <div class="item-title"><a href="speakers.html"> Speakers</a></div>
+                </div>
+            </li>
+            <li class="item-content">
+                <div class="item-media"><img src="img/user.png" height="24" width="24"></div>
+                <div class="item-inner">
+                    <div class="item-title"><a href="#"> My Account</a></div>
+                </div>
+            </li>
+            <li class="item-content">
+                <div class="item-media"><img src="img/settings_b2.png" height="24" width="24"></div>
+                <div class="item-inner">
+                    <div class="item-title"><a href="#"> Settings</a></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- Views-->
+<div class="views">
+    <!-- Your main view, should have "view-main" class-->
+    <div class="view view-main theme-red">
+
+        <div class="pages navbar-fixed toolbar-fixed">
+            <div class="page">
+
+                <div data-page="home" class="page with-subnavbar">
+                    <!-- Top Navbar -->
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+                            </div>
+                            <div class="center sliding">Speakers</div>
+                        </div>
+                    </div>
+                    <!-- /End Top Navbar -->
+
+                    <!-- Sub Navbar -->
+                    <div class="bg-red">
+                        <div class="buttons-row padding-top-56">
+                            <!-- Link to 1st tab, active -->
+                            <a href="#speakers" class="tab-link active button button-fill color-red">All Speakers</a>
+                            <!-- Link to 2nd tab -->
+                            <a href="#groups" class="tab-link button button-fill color-red">Groups</a>
+                        </div>
+                    </div>
+                    <!-- /End Sub Navbar -->
+
+                    <!-- Add Speaker -->
+                    <div id="addspeakerdiv">
+                        <a href="#" data-popover=".demo-popver" class="floating-button floating-button-to-popover color-red open-popover">
+                            <i class="icon icon-plus"></i>
+                        </a>
+
+                    </div>
+
+                    <!-- Tabs Page Content -->
+                    <div class="tabs-swipeable-wrap">
+                        <!-- Tabs, tabs wrapper -->
+                        <div class="tabs">
+                            <!-- All Speakers -->
+                            <div id="speakers" class="page-content tab active padding-0">
+                                <div class="content-block">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <div class="card-content-inner">
+                                                <div class="row">
+                                                    <div class="col-20">
+                                                        <img src="img/green.png" height="36" width="36" class="margin-14">
+                                                    </div>
+
+                                                    <div class="col-60">
+                                                        <h2>Phone Speaker</h2>
+                                                    </div>
+
+                                                    <div class="col-20">
+                                                        <img src="img/play-button_b.png" height="36" width="36" class="margin-14">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /All Speakers -->
+
+                            <!-- Groups -->
+                            <div id="groups" class="page-content tab padding-0">
+                                <div class="content-block">
+
+                                </div>
+                            </div>
+                            <!-- /Groups -->
+
+                        </div>
+                    </div>
+                    <!-- Tabs Page Content -->
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Popover -->
+        <div class="popover demo-popover">
+            <div class="popover-inner">
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <a href="#" class="item-content item-link">
+                                <div class="item-inner">
+                                    <div class="item-title">Link 1</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="item-content item-link">
+                                <div class="item-inner">
+                                    <div class="item-title">Link 2</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="item-content item-link">
+                                <div class="item-inner">
+                                    <div class="item-title">Link 3</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- JS-->
+<script type="text/javascript" src="js/framework7.min.js"></script>
+<script type="text/javascript" src="js/my-app.js"></script>
+<script type="text/javascript" src="js/speakers.js"></script>
+</body>
+</html>
