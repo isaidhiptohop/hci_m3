@@ -12,6 +12,10 @@
     height: 56px;
 }
 
+.bottom-nowPlaying {
+    height: 25%;
+}
+
 .margin-right-20 {
     margin-right: 20px;
 }
@@ -20,9 +24,9 @@
     padding-top: 56px;
 }
 
-.padding-0 {
-    padding: 0px !important;
-}
+.padding-0 {  padding: 0px !important;  }
+
+.padding-logo {  padding-right: 10px; }
 
 .play-padding {
     padding: 0 40px;
@@ -38,4 +42,12 @@
     height: 40vw;
     background-size: cover;
     background-position: center;
+}
+
+a:active {
+    color: #f44336;
+}
+
+a {
+    color: #000;
 }

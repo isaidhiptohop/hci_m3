@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-    <!--<meta name="apple-mobile-web-app-capable" content="yes">-->
-    <!--<meta name="apple-mobile-web-app-status-bar-style" content="black">-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <title>Now Playing</title>
 
@@ -17,66 +17,261 @@
 
 </head>
 <body>
- <!--Panels overlay-->
-<div class="panel-overlay"></div>
 
-<!-- Left panel with reveal effect-->
-<div class="panel panel-left panel-cover">
-    <div class="content-block">
-        <p>Left panel content goes here</p>
-    </div>
-</div>
-
+<!-- Views-->
 <div class="views">
-    <div class="view view-main">
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="left"></div>
-                <div class="center">Sub Navbar</div>
-                <div class="right"></div>
-                <!-- Sub navbar -->
-                <div class="subnavbar">
-                    <div class="buttons-row">
-                        <a href="#tab1" class="button tab-link active">Tab 1</a>
-                        <a href="#tab2" class="button tab-link">Tab 2</a>
-                        <a href="#tab3" class="button tab-link">Tab 3</a>
+    <!-- Your main view, should have "view-main" class-->
+    <div class="view view-main theme-red">
+
+        <div class="pages navbar-fixed toolbar-fixed">
+            <div class="page">
+                <div data-page="home" class="page with-subnavbar">
+
+                    <!-- Top Navbar -->
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <a href="musicLib.html" class="link icon-only"> <i class="icon icon-prev"></i></a>
+                            </div>
+                            <div class="center sliding">Song name........</div>
+                        </div>
+                    </div>
+                    <!-- /End Top Navbar -->
+
+                    <!-- Sub Navbar -->
+                    <div class="bg-red">
+                        <div class="buttons-row padding-top-56">
+                            <!-- Link to 1st tab, active -->
+                            <a href="#nowPlaying" class="tab-link active button button-fill color-red">Now Playing</a>
+                            <!-- Link to 2nd tab -->
+                            <a href="#queue" class="tab-link button button-fill color-red">Queue</a>
+                        </div>
+                    </div>
+                    <!-- /End Sub Navbar -->
+
+                    <!-- Tabs Page Content -->
+                    <div class="tabs-swipeable-wrap">
+                        <!-- Tabs, tabs wrapper -->
+                        <div class="tabs">
+                            <!-- nowPlaying -->
+                            <div id="nowPlaying" class="page-content tab active padding-0">
+                                <div class="content-block">
+
+                                </div>
+                            </div>
+                            <!-- /nowPlaying -->
+
+                            <!-- queue -->
+                            <div id="queue" class="page-content tab padding-0">
+                                <div class="list-block media-list">
+                                    <ul>
+                                        <li>
+                                            <div class="item-content">
+                                                <div class="item-media"><img src="img/song.png" width="44"></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title-row">
+                                                        <div class="item-title">Yellow Submarine</div>
+                                                    </div>
+                                                    <div class="item-subtitle">Beatles</div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="item-content">
+                                                <div class="item-media"><img src="img/song.png" width="44"></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title-row">
+                                                        <div class="item-title">Yellow Submarine</div>
+                                                    </div>
+                                                    <div class="item-subtitle">Beatles</div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="item-content">
+                                                <div class="item-media"><img src="img/song.png" width="44"></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title-row">
+                                                        <div class="item-title">Yellow Submarine</div>
+                                                    </div>
+                                                    <div class="item-subtitle">Beatles</div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="item-content">
+                                                <div class="item-media"><img src="img/song.png" width="44"></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title-row">
+                                                        <div class="item-title">Yellow Submarine</div>
+                                                    </div>
+                                                    <div class="item-subtitle">Beatles</div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="item-content">
+                                                <div class="item-media"><img src="img/song.png" width="44"></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title-row">
+                                                        <div class="item-title">Yellow Submarine</div>
+                                                    </div>
+                                                    <div class="item-subtitle">Beatles</div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="item-content">
+                                                <div class="item-media"><img src="img/song.png" width="44"></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title-row">
+                                                        <div class="item-title">Yellow Submarine</div>
+                                                    </div>
+                                                    <div class="item-subtitle">Beatles</div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="item-content">
+                                                <div class="item-media"><img src="img/song.png" width="44"></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title-row">
+                                                        <div class="item-title">Yellow Submarine</div>
+                                                    </div>
+                                                    <div class="item-subtitle">Beatles</div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="item-content">
+                                                <div class="item-media"><img src="img/song.png" width="44"></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title-row">
+                                                        <div class="item-title">Yellow Submarine</div>
+                                                    </div>
+                                                    <div class="item-subtitle">Beatles</div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="item-content">
+                                                <div class="item-media"><img src="img/song.png" width="44"></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title-row">
+                                                        <div class="item-title">Yellow Submarine</div>
+                                                    </div>
+                                                    <div class="item-subtitle">Beatles</div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="item-content">
+                                                <div class="item-media"><img src="img/song.png" width="44"></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title-row">
+                                                        <div class="item-title">Yellow Submarine</div>
+                                                    </div>
+                                                    <div class="item-subtitle">Beatles</div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="item-content">
+                                                <div class="item-media"><img src="img/song.png" width="44"></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title-row">
+                                                        <div class="item-title">Yellow Submarine</div>
+                                                    </div>
+                                                    <div class="item-subtitle">Beatles</div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="item-content">
+                                                <div class="item-media"><img src="img/song.png" width="44"></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title-row">
+                                                        <div class="item-title">Yellow Submarine</div>
+                                                    </div>
+                                                    <div class="item-subtitle">Beatles</div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="item-content">
+                                                <div class="item-media"><img src="img/song.png" width="44"></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title-row">
+                                                        <div class="item-title">Yellow Submarine</div>
+                                                    </div>
+                                                    <div class="item-subtitle">Beatles</div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="item-content">
+                                                <div class="item-media"><img src="img/song.png" width="44"></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title-row">
+                                                        <div class="item-title">Yellow Submarine</div>
+                                                    </div>
+                                                    <div class="item-subtitle">Beatles</div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="item-content">
+                                                <div class="item-media"><img src="img/song.png" width="44"></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title-row">
+                                                        <div class="item-title">Yellow Submarine</div>
+                                                    </div>
+                                                    <div class="item-subtitle">Beatles</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- /queue -->
+
+                        </div>
+                    </div>
+                    <!-- Tabs Page Content -->
+
+                    <!-- Bottom Toolbar-->
+                    <div class="toolbar toolbar-bottom bottom-nowPlaying">
+                        <div class="toolbar-inner">
+                            <div class="player-left centered">
+                                <img src="img/back_w.png" height="24" width="24">
+                                <img src="img/play-button_w.png" height="42" width="42"class="play-padding">
+                                <img src="img/next_w.png" height="24" width="24">
+                            </div>
+                            <div class="player-right centered">
+                                <a href="speakers.html"><img src="img/speakers_w2.png" height="42" width="42"></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="pages navbar-through">
-            <!-- Pag has additional "with-subnavbar" class -->
-            <div data-page="home" class="page with-subnavbar">
-                <div class="page-content hide-bars-on-scroll">
-                    <div class="tabs">
-                        <div id="tab1" class="tab active">
-                            <div class="content-block">
-                                <p>Lorem ipsum dolor ...</p>
-                                <p>In sed augue non ...</p>
-                            </div>
-                        </div>
-                        <div id="tab2" class="tab">
-                            <div class="content-block">
-                                <p>Donec iaculis ...</p>
-                                <p>Curabitur egestas, mi ...</p>
-                                <p>Donec iaculis posuere ...</p>
-                            </div>
-                        </div>
-                        <div id="tab3" class="tab">
-                            <div class="content-block">
-                                <p>Etiam non interdum erat...</p>
-                                <p>Duis ac semper risus. Suspendisse...</p>
-                                <p>Etiam non interdum erat...</p>
-                                <p>Duis ac semper risus. Suspendisse...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 </div>
-
 
 <!-- JS-->
 <script type="text/javascript" src="js/framework7.min.js"></script>
