@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <!--<meta name="apple-mobile-web-app-capable" content="yes">-->
+    <!--<meta name="apple-mobile-web-app-status-bar-style" content="black">-->
+
+    <title>Now Playing</title>
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+<body>
+ <!--Panels overlay-->
+<div class="panel-overlay"></div>
+
+<!-- Left panel with reveal effect-->
+<div class="panel panel-left panel-cover">
+    <div class="content-block">
+        <p>Left panel content goes here</p>
+    </div>
+</div>
+
+<div class="views">
+    <div class="view view-main">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left"></div>
+                <div class="center">Sub Navbar</div>
+                <div class="right"></div>
+                <!-- Sub navbar -->
+                <div class="subnavbar">
+                    <div class="buttons-row">
+                        <a href="#tab1" class="button tab-link active">Tab 1</a>
+                        <a href="#tab2" class="button tab-link">Tab 2</a>
+                        <a href="#tab3" class="button tab-link">Tab 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pages navbar-through">
+            <!-- Pag has additional "with-subnavbar" class -->
+            <div data-page="home" class="page with-subnavbar">
+                <div class="page-content hide-bars-on-scroll">
+                    <div class="tabs">
+                        <div id="tab1" class="tab active">
+                            <div class="content-block">
+                                <p>Lorem ipsum dolor ...</p>
+                                <p>In sed augue non ...</p>
+                            </div>
+                        </div>
+                        <div id="tab2" class="tab">
+                            <div class="content-block">
+                                <p>Donec iaculis ...</p>
+                                <p>Curabitur egestas, mi ...</p>
+                                <p>Donec iaculis posuere ...</p>
+                            </div>
+                        </div>
+                        <div id="tab3" class="tab">
+                            <div class="content-block">
+                                <p>Etiam non interdum erat...</p>
+                                <p>Duis ac semper risus. Suspendisse...</p>
+                                <p>Etiam non interdum erat...</p>
+                                <p>Duis ac semper risus. Suspendisse...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- JS-->
+<script type="text/javascript" src="js/framework7.min.js"></script>
+<script type="text/javascript" src="js/my-app.js"></script>
+</body>
+</html>

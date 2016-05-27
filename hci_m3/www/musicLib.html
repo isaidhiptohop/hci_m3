@@ -32,8 +32,8 @@
 		<!-- Your main view, should have "view-main" class-->
 		<div class="view view-main theme-red">
 
-			<div class="pages">
-				<div class="page navbar-fixed toolbar-fixed">
+			<div class="pages navbar-fixed toolbar-fixed">
+				<div class="page">
 					<div data-page="home" class="page with-subnavbar">
 
 						<!-- Top Navbar -->
@@ -46,24 +46,28 @@
 								<div class="right">
 									<img src="img/search.png" height="24" width="24" class="margin-right-20">
 								</div>
-
-								<div class="subnavbar">
-									<!-- Buttons row as tabs controller in Subnavbar-->
-									<div class="buttons-row">
-										<a href="#tab1" class="button active tab-link">Songs</a>
-										<a href="#tab2" class="button tab-link">Playlists</a>
-									</div>
-								</div>
 							</div>
 						</div>
 						<!-- /End Top Navbar -->
 
+						<!-- Sub Navbar -->
+						<div class="bg-red">
+							<div class="buttons-row padding-top-56">
+								<!-- Link to 1st tab, active -->
+								<a href="#songs" class="tab-link active button button-fill color-red">Songs</a>
+								<!-- Link to 2nd tab -->
+								<a href="#playlists" class="tab-link button button-fill color-red">Playlists</a>
+							</div>
+						</div>
+						<!-- /End Sub Navbar -->
+
 						<!-- Tabs Page Content -->
-						<div class="tabs-swipeable-wrap padding-bottom-56">
+						<div class="tabs-swipeable-wrap">
 							<!-- Tabs, tabs wrapper -->
 							<div class="tabs">
 								<!-- Songs -->
-								<div id="tab1" class="page-content tab active">
+								<div id="songs" class="page-content tab active padding-0">
+									<div class="content-block-title">Songs</div>
 									<div class="list-block media-list">
 										<ul>
 											<li>
@@ -311,9 +315,71 @@
 								<!-- /Songs -->
 
 								<!-- Playlist -->
-								<div id="tab2" class="page-content tab">
+								<div id="playlists" class="page-content tab padding-0">
+									<div class="content-block-title">Playlists</div>
 									<div class="content-block">
-										... Tab 2 content ...
+										<div class="row no-gutter">
+											<div class="col-50">
+												<div class="card demo-card-header-pic">
+													<div style="background-image:url(img/playlist.png)" valign="bottom" class="card-header color-white no-border"></div>
+													<div class="card-content">
+														<div class="card-content-inner">
+															<p>Quisque eget vestibulum nulla...</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-50">
+												<div class="card demo-card-header-pic">
+													<div style="background-image:url(img/playlist.png)" valign="bottom" class="card-header color-white no-border"></div>
+													<div class="card-content">
+														<div class="card-content-inner">
+															<p>Quisque eget vestibulum nulla...</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-50">
+												<div class="card demo-card-header-pic">
+													<div style="background-image:url(img/playlist.png)" valign="bottom" class="card-header color-white no-border"></div>
+													<div class="card-content">
+														<div class="card-content-inner">
+															<p>Quisque eget vestibulum nulla...</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-50">
+												<div class="card demo-card-header-pic">
+													<div style="background-image:url(img/playlist.png)" valign="bottom" class="card-header color-white no-border"></div>
+													<div class="card-content">
+														<div class="card-content-inner">
+															<p>Quisque eget vestibulum nulla...</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-50">
+												<div class="card demo-card-header-pic">
+													<div style="background-image:url(img/playlist.png)" valign="bottom" class="card-header color-white no-border"></div>
+													<div class="card-content">
+														<div class="card-content-inner">
+															<p>Quisque eget vestibulum nulla...</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-50">
+												<div class="card demo-card-header-pic">
+													<div style="background-image:url(img/playlist.png)" valign="bottom" class="card-header color-white no-border"></div>
+													<div class="card-content">
+														<div class="card-content-inner">
+															<p>Quisque eget vestibulum nulla...</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 								<!-- /Playlist -->
@@ -325,15 +391,13 @@
 						<!-- Bottom Toolbar-->
 						<div class="toolbar toolbar-bottom bottom-player">
 							<div class="toolbar-inner">
-								<div class="player-left">
-									<div class="centered">
-										<img src="img/back_w.png" height="24" width="24">
-										<img src="img/play-button_w.png" height="42" width="42">
-										<img src="img/next_w.png" height="24" width="24">
-									</div>
+								<div class="player-left centered">
+									<img src="img/back_w.png" height="24" width="24">
+									<img src="img/play-button_w.png" height="42" width="42"class="play-padding">
+									<img src="img/next_w.png" height="24" width="24">
 								</div>
-								<div class="player-right">
-									<a href="speakers.html"><img src="img/speakers_w2.png" height="42" width="42" class="centered"></a>
+								<div class="player-right centered">
+									<a href="speakers.html"><img src="img/speakers_w2.png" height="42" width="42"></a>
 								</div>
 							</div>
 						</div>

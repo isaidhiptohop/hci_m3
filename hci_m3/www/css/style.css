@@ -16,8 +16,26 @@
     margin-right: 20px;
 }
 
+.padding-top-56 {
+    padding-top: 56px;
+}
+
+.padding-0 {
+    padding: 0px !important;
+}
+
+.play-padding {
+    padding: 0 40px;
+}
 
 .centered {
-    right: auto;
-    left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.demo-card-header-pic .card-header {
+    height: 40vw;
+    background-size: cover;
+    background-position: center;
 }
