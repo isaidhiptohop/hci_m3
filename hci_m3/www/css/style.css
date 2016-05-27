@@ -1,11 +1,23 @@
 .player-left {
+    height: 56px;
     width: 80%;
 }
 
 .player-right {
+    height: 56px;
     width: 20%;
+}
+
+.bottom-player {
+    height: 56px;
 }
 
 .margin-right-20 {
     margin-right: 20px;
+}
+
+
+.centered {
+    right: auto;
+    left: auto;
 }
