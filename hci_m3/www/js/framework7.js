@@ -101,6 +101,7 @@
             modalButtonCancel: 'Cancel',
             modalUsernamePlaceholder: 'Username',
             modalPasswordPlaceholder: 'Password',
+            modalNewSpeakerPlaceholder: 'New Speaker',
             modalTitle: 'Framework7',
             modalCloseByOutside: false,
             actionsCloseByOutside: true,
@@ -3272,7 +3273,7 @@
             return app.modal({
                 text: text || '',
                 title: typeof title === 'undefined' ? app.params.modalTitle : title,
-                afterText: '<div class="input-field"><input type="text" class="modal-text-input"></div>',
+                afterText: '<div class="input-field"><input type="text" name="modal-speaker" placeholder="' + app.params.modalNewSpeakerPlaceholder + '" class="modal-text-input"></div>',
                 buttons: [
                     {
                         text: app.params.modalButtonCancel
@@ -3283,11 +3284,14 @@
                     }
                 ],
                 onClick: function (modal, index) {
-                    if (index === 0 && callbackCancel) callbackCancel($(modal).find('.modal-text-input').val());
-                    if (index === 1 && callbackOk) callbackOk($(modal).find('.modal-text-input').val());
+                    var newspeaker = $(modal).find('.modal-text-input[name="model-speaker"]').val();
+                    if (index === 0 && callbackCancel) callbackCancel(newspeaker);
+                    if (index === 1 && callbackOk) callbackOk(newspeaker);
+                    saveSpeakerData(newspeaker);
                 }
             });
         };
+        
         app.modalLogin = function (text, title, callbackOk, callbackCancel) {
             if (typeof title === 'function') {
                 callbackCancel = arguments[2];

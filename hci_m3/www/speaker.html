@@ -63,10 +63,10 @@
     <!-- Your main view, should have "view-main" class-->
     <div class="view view-main theme-red">
 
-        <div class="pages navbar-fixed toolbar-fixed">
-            <div class="page">
+        <div class="pages">
+            <!--<div class="page">-->
 
-                <div data-page="home" class="page with-subnavbar">
+                <div data-page="home" class="page navbar-fixed">
                     <!-- Top Navbar -->
                     <div class="navbar">
                         <div class="navbar-inner">
@@ -90,12 +90,9 @@
                     <!-- /End Sub Navbar -->
 
                     <!-- Add Speaker -->
-                    <div id="addspeakerdiv">
-                        <a href="#" data-popover=".demo-popver" class="floating-button floating-button-to-popover color-red open-popover">
-                            <i class="icon icon-plus"></i>
-                        </a>
-
-                    </div>
+                    <a href="#" class="floating-button color-red" id="addspeaker" onclick="addSpeaker()">
+                        <i class="icon icon-plus"></i>
+                    </a>
 
                     <!-- Tabs Page Content -->
                     <div class="tabs-swipeable-wrap">
@@ -104,6 +101,7 @@
                             <!-- All Speakers -->
                             <div id="speakers" class="page-content tab active padding-0">
                                 <div class="content-block">
+
                                     <div class="card">
                                         <div class="card-content">
                                             <div class="card-content-inner">
@@ -123,6 +121,8 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div id="speakerlist"></div>
                                 </div>
                             </div>
                             <!-- /All Speakers -->
@@ -143,43 +143,14 @@
             </div>
         </div>
 
-        <!-- Popover -->
-        <div class="popover demo-popover">
-            <div class="popover-inner">
-                <div class="list-block">
-                    <ul>
-                        <li>
-                            <a href="#" class="item-content item-link">
-                                <div class="item-inner">
-                                    <div class="item-title">Link 1</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="item-content item-link">
-                                <div class="item-inner">
-                                    <div class="item-title">Link 2</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="item-content item-link">
-                                <div class="item-inner">
-                                    <div class="item-title">Link 3</div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
     </div>
 </div>
 
 <!-- JS-->
 <script type="text/javascript" src="js/framework7.min.js"></script>
 <script type="text/javascript" src="js/my-app.js"></script>
-<script type="text/javascript" src="js/speakers.js"></script>
+<script type="text/javascript" src="js/speaker.js"></script>
+
+<div class="modal-overlay"></div>
 </body>
 </html>
